@@ -1,0 +1,312 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    color: #242635;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 90%;
+    max-width: 1260px;
+    height: 80px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+
+/* Logo */
+
+.logo img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+
+/* Navigation */
+
+.nav {
+    display: flex;
+    gap: 22px;
+
+    font-size: 11px;
+}
+
+
+/* Tablet navigation hidden on desktop */
+
+.tablet-nav {
+    display: none;
+}
+
+
+/* Mobile menu hidden on desktop */
+
+.menu-icon {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 16px;
+    color: #242635;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    width: 90%;
+    max-width: 1100px;
+
+    min-height: 648px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 576px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.hero-text {
+    max-width: 416px;
+}
+
+.hero-text h1 {
+    margin: 0 0 25px;
+
+    font-size: 60px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.hero-text p {
+    margin: 0;
+
+    max-width: 416px;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.hero-image {
+    display: block;
+
+    width: 576px;
+    height: 648px;
+}
+
+.hero-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   ARROW
+========================= */
+
+.arrow {
+    position: absolute;
+
+    left: 0;
+    bottom: 25px;
+
+    font-size: 28px;
+}
+
+
+/* =================================================
+   TABLET
+   601px - 1000px
+================================================= */
+
+@media (max-width: 1000px) {
+
+    /* Header */
+
+    .header {
+        width: 90%;
+        height: 70px;
+
+        justify-content: space-between;
+    }
+
+
+    /* Hide desktop navigation */
+
+    .desktop-nav {
+        display: none;
+    }
+
+
+    /* Show tablet navigation */
+
+    .tablet-nav {
+        display: flex;
+    }
+
+
+    /* Hero becomes vertical */
+
+    .hero {
+        width: 100%;
+
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* Text */
+
+    .hero-text {
+        width: 100%;
+        max-width: none;
+
+        padding: 150px 30px 40px;
+
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        margin-bottom: 20px;
+
+        font-size: 55px;
+    }
+
+    .hero-text p {
+        max-width: 600px;
+
+        margin: 0 auto;
+    }
+
+
+    /* Tablet image */
+
+    .hero-image {
+        width: 100%;
+        height: 650px;
+    }
+
+
+    /* Hide arrow */
+
+    .arrow {
+        display: none;
+    }
+}
+
+
+/* =================================================
+   MOBILE
+   600px and below
+================================================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    .header {
+        width: 90%;
+        height: 60px;
+    }
+
+
+    /* Hide navigation */
+
+    .desktop-nav,
+    .tablet-nav {
+        display: none;
+    }
+
+
+    /* Show mobile menu */
+
+    .menu-icon {
+        display: block;
+    }
+
+
+    /* Mobile text */
+
+    .hero-text {
+        padding: 100px 20px 30px;
+
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        margin-bottom: 15px;
+
+        font-size: 32px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-text p {
+        max-width: 270px;
+
+        margin: 0 auto;
+
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+
+    /* Mobile image */
+
+    .hero-image {
+        width: 100%;
+        height: 300px;
+    }
+
+}
